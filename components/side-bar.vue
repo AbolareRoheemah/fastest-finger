@@ -1,7 +1,7 @@
 <template>
     <div>
         <nav class="sideNav">
-        <span>Fastest Finger</span> <a href="#" class="closeBtn" @click="hideNav"> <img src="img/fastestArrow.png" class="arrow" alt=""></a>
+        <p>Fastest Finger</p> <a href="#" class="closeBtn" @click="hideNav"><font-awesome-icon :icon="['fas', 'chevron-left']"/></a>
         <hr class="Hr">
         <a href="#">Menu</a>
         <a href="#">Dashboard</a>
@@ -11,15 +11,8 @@
         <a href="#">Coins Pricing</a>
         <a href="#">Account Settings</a>
         </nav>
-        <main class="main-content">
+        <main>
         
-        
-        <!-- <div class="navDiv">
-            <button class="openSideNav"><img src="img/arrowIcon.png" alt=""></button>
-            <div class="flex"><p>Account Settings</p></div>
-            <div><input type="search" placeholder="Search" class="input"></div>
-        </div>
-        <div class="midDiv"></div> -->
         </main>
     </div>
 </template>

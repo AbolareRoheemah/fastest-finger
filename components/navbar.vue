@@ -1,9 +1,11 @@
 <template>
-    <div>
+    <div class="main-content">
         <div class="navDiv">
-            <button class="openSideNav" @click="showNav"><font-awesome-icon :icon="['fab', 'arrow']"/></button>
+            <a class="openSideNav" @click="showNav"><font-awesome-icon :icon="['fas', 'chevron-circle-right']"/></a>
             <div class="flex"><p>Account Settings</p></div>
-            <div><input type="search" placeholder="Search" class="input"></div>
+            <div class="inputParent"><input type="search" placeholder="Search `<font-awesome-icon :icon='['fas', 'search']'/>`" class="input"></div>
+            <p class="helloText">Hello, Precious</p>
+            <img src="~/assets/img/image 1.png" alt=""><a href="#"><font-awesome-icon :icon="['fas', 'sort-down']"/></a>
         </div>
         <div class="midDiv"></div>
     </div>
