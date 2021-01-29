@@ -1,29 +1,10 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        fastest-finger
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+ <div>
+    <p>Icons</p>
+    <font-awesome-icon :icon="['fab', 'linkedin']"/>
+    <font-awesome-icon :icon="['fab', 'github']"/>
+    <font-awesome-icon :icon="['fab', 'facebook']"/>
+    <font-awesome-icon :icon="['fas', 'coffee']"/>
   </div>
 </template>
 

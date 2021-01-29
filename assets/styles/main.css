@@ -1,0 +1,92 @@
+body {
+    box-sizing: border-box;
+    background: #F3F6FA;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .sideNav {
+    height: 100vh; 
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #00102D;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+  }
+  .hr {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+  }
+  .sideNav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    font-family: Overpass;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+    color: #FFFFFF;
+  }
+  
+.sideNav .closeBtn {
+  position: absolute;
+  top: 2.5%;
+  right: 25px;
+  font-size: 36px;
+  padding: 17px;
+  left: 75%;
+  display: inline-flex;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 100%;
+}
+.arrow {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  bottom: 35%;
+}
+button {
+  border-radius: 90%;
+  border-width: 0px;
+  background: rgba(255, 255, 255, 0.19);
+}
+.main-content{
+  transition: 0.5s;
+}
+.navDiv {
+  /* position: absolute; */
+  width: 1600px;
+  height: 80px;
+  left: -160px;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  background: #FFFFFF;
+  box-shadow: inset 0px -1px 0px #E2E2EA;
+}
+.flex {
+  justify-self: flex-start;
+  margin: auto 60% auto 30px; 
+  font-family: Overpass;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  /* identical to box height */
+  color: #000000;
+}
+.input {
+  padding: auto 0;
+  background: #E6E9EE;
+  opacity: 0.5;
+  border-radius: 27.5px;
+  width: 289px;
+  height: 55px;
+}
