@@ -1,15 +1,16 @@
 <template>
  <div>
-    <!-- <p>Icons</p>
-    <font-awesome-icon :icon="['fab', 'linkedin']"/>
-    <font-awesome-icon :icon="['fab', 'github']"/>
-    <h1></h1>
-    <font-awesome-icon :icon="['fas', 'coffee']"/> -->
+   <MidDiv />
   </div>
 </template>
 
 <script>
-export default {}
+import MidDiv from '~/components/mid-content-acc.vue';
+
+
+export default {
+  components: { MidDiv },
+}
 </script>
 
 <style>
