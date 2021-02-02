@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="/CSS/bootstrap-grid.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/90ba37c436.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="sidebar">
+            <h2>Fastest Fingers</h2>
+            <h4>MENU</h4>
+            <a href="./index.html">Dashboard</a>
+            <a href="./waterinfux.html">Contests</a>
+            <a href="./results.html">Users</a>
+            <a href="./contact.html">Adverts</a>
+            <a href="./results.html">Coins Pricing</a>
+            <a href="./contact.html">Account Settings</a>
+        </div>
+    </div>
+    <div class="toggle" onclick="togglemenu()"></div>
+    <script type="text/javascript">
+        function togglemenu() {
+            let navigation = document.querySelector(".sidebar");
+            let toggle = document.querySelector(".toggle");
+            navigation.classList.toggle("active");
+            toggle.classList.toggle("active");
+        }</script>
+
+</body>
+
+</html>
