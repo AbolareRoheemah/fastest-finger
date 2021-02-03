@@ -77,13 +77,14 @@ body {
 }
 .flex {
   justify-content: flex-start;
-  margin: auto 40% auto 30px; 
+  margin: auto 34px auto 30px; 
   font-family: 'Overpass';
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 25px;
   white-space: nowrap;
+  flex-grow: 3;
   /* identical to box height */
   color: #000000;
 }
@@ -133,10 +134,11 @@ inputParent {
   transform: translate(-50%, 0);
   top: 104px;
   right: 50px;
+  display: inline-block;
   background: #FFFFFF;
   border: 1px solid #E2E2EA;
   justify-content: center;
-  bottom: 116px;
+  color: #000000;
 }
 .setting {
   position: relative;
@@ -239,4 +241,141 @@ inputParent {
   text-transform: uppercase;
 
   color: #B67C62;
+}
+.button {
+  background: #F1AA83;
+  box-shadow: 0px 3px 0px #EA9975;
+  border-radius: 20px;
+  text-align: center;
+  width: 170px;
+  height: 48px;
+  padding: 17px 0px 16px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  margin-left: 82px;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  top: 16px;
+  color: #B67C62;
+}
+
+/* styles for the coins page */
+.paddi {
+  padding-bottom: 10%;
+}
+.boxes {
+  height: 32px;
+  width: 32px;
+  left: 0px;
+  top: 0px;
+  border-radius: 2px;
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  box-sizing: border-box;
+  border-radius: 2px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 8px;
+  text-align: center;
+  align-items: center
+}
+.goto {
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  box-sizing: border-box;
+  border-radius: 2px;
+  margin: 0px 8px;
+  width: 50px;
+  height: 32px;
+}
+.smallBoxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 3%;
+}
+.coins-mid {
+  position: absolute;
+  width: 1092px;
+  height: 508px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 104px;
+  padding-bottom: 40%;
+  background: #FFFFFF;
+  border: 1px solid #E2E2EA;
+}
+.top-band {
+  /* position: absolute; */
+  width: 1092px;
+  height: 64px;
+  top: 0px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  background: #F0F2F4;
+  border-radius: 0px;
+  /* padding-right: 34px; */
+}
+.thead-data {
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  padding-top: 24px;
+  padding-right: 34px;
+  color: #75759E;
+  text-align: left;
+  width: inherit;
+  display: flex;
+  justify-content: space-around;
+}
+table {
+  padding-left: 84px;
+  padding-top: 24px;
+  padding-right: 185px;
+  table-layout: fixed;
+  text-align: left;
+  justify-content: space-around;
+}
+.next-band {
+  width: 1092px;
+  height: 64px;
+  /* top: 0px; */
+  white-space: nowrap;
+  
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+.pen, .pen:hover {
+  cursor: pointer;
+  margin-right: 0;
+  width: 26px;
+  height: 26px;
+  padding-left: 5px;
+  padding-top: 2px;
+  align-items: center;
+  border-radius: 100%;
+  background: #F0F2F4;
+}
+.times, .times:hover {
+  cursor: pointer;
+  position: absolute;
+  left: 76%;
+  margin-left: 0;
+  width: 26px;
+  height: 26px;
+  padding-left: 7.6px;
+  padding-top: 3.5px;
+  align-items: center;
+  border-radius: 100%;
+  background: #F0F2F4;
 }
