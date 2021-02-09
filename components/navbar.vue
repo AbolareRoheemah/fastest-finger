@@ -7,10 +7,11 @@
                     <div v-show="flag" class="button" id="modal-btn" @click="showModal" role="button">New Pricing</div>
                 </nuxt-link>
             </div>
-                <input type="text" class="input" v-model="Search"><font-awesome-icon :icon="['fas', 'search']" class="searchIcon"/>
+                <input type="text" class="input" v-model="Search"><!-- <font-awesome-icon :icon="['fas', 'search']" class="searchIcon"/> -->
             <p class="helloText">Hello, Precious</p>
-            <img src="~/assets/img/image 1.png" alt=""><a href="#" class="picIcon"><font-awesome-icon :icon="['fas', 'sort-down']"/></a>
+            <img src="~/assets/img/image 1.png" alt="" class="userImg"><a href="#" class="picIcon"><font-awesome-icon :icon="['fas', 'sort-down']"/></a>
         </div>
+
     </div>
 </template>
 
@@ -43,7 +44,7 @@
             } else if (this.names == 'Coins' || this.names == 'Coins-last-page' || this.names == 'Coins-first-page') {
                 this.names = 'Coins';
             }
-        }
+        },
     }
 </script>
 

@@ -69,6 +69,18 @@
                 ],
             }
         },
+        methods: {  
+            showModal1() {
+                let modalBtn1 = document.querySelector('.pen');
+                let modal1 = document.querySelector('.modal1');
+                let closeBtn1 = document.querySelector('.close-btn1');
+                modal1.style.display = 'block';
+            },
+            deleteCoin() {
+                const oneCoin = document.querySelector('.next-band');
+                oneCoin.remove();
+            },
+        },
     }
 </script>
 
