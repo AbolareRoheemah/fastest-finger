@@ -12,6 +12,7 @@
             <img src="~/assets/img/image 1.png" alt="" class="userImg"><a href="#" class="picIcon"><font-awesome-icon :icon="['fas', 'sort-down']"/></a>
         </div>
 
+
     </div>
 </template>
 
