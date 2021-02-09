@@ -9,6 +9,7 @@ import MidDiv from '~/components/mid-content-acc.vue';
 
 
 export default {
+  name: 'Account',
   components: { MidDiv },
 }
 </script>

@@ -2,17 +2,27 @@
     <div class="main-content">
         <div class="navDiv">
             <a class="openSideNav" @click="showNav"><font-awesome-icon :icon="['fas', 'chevron-circle-right']"/></a>
-            <div class="flex"><nuxt-link to='/CoinsPage'><p class="Navname">Account Settings</p><div class="button" id="modal-btn" @click="showModal" role="button">New Pricing</div></nuxt-link></div>
-            <div class="input" role="input"><span>Search</span><a class="searchIcon"><font-awesome-icon :icon="['fas', 'search']"/></a></div>
+            <div class="flex">
+                <nuxt-link to='/Coins/first-page'><p class="Navname">{{ names }}</p>
+                    <div v-show="flag" class="button" id="modal-btn" @click="showModal" role="button">New Pricing</div>
+                </nuxt-link>
+            </div>
+                <input type="text" class="input" v-model="Search"><font-awesome-icon :icon="['fas', 'search']" class="searchIcon"/>
             <p class="helloText">Hello, Precious</p>
             <img src="~/assets/img/image 1.png" alt=""><a href="#" class="picIcon"><font-awesome-icon :icon="['fas', 'sort-down']"/></a>
         </div>
-        <!-- <input type="search" placeholder="Search" class="input"> -->
     </div>
 </template>
 
 <script>
     export default {
+        data() {
+            return {
+                flag: undefined,
+                names: this.$nuxt.$route.name,
+                Search: 'Search'
+            }
+        },
         methods: {
             showNav() {
                 document.querySelector(".sideNav").style.width = "248px";
@@ -27,9 +37,13 @@
                 modal.style.display = 'block';
             },
         },
-        mounted () {
-            document.querySelector('#modal-btn').style.display = 'none';
-        },
+        created () {
+            if (this.names == 'index') {
+                this.names = 'Account Settings';
+            } else if (this.names == 'Coins' || this.names == 'Coins-last-page' || this.names == 'Coins-first-page') {
+                this.names = 'Coins';
+            }
+        }
     }
 </script>
 

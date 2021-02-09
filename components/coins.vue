@@ -12,70 +12,24 @@
                     <th class="thead-data">Action</th>
                     <th class="thead-data">Expiry</th>
                 </thead>
-                <tr class="next-band">
-                    <td class="thead-data">100</td>
-                    <td class="thead-data">infinite</td>
-                    <td class="thead-data">55,000</td>
-                    <td class="thead-data">16 Apr 2020, 00:00</td>
-                    <td class="thead-data"><span class="pen" @click="showModal1"><font-awesome-icon :icon="['fas', 'pen']"/></span><span class="times"><font-awesome-icon :icon="['fas', 'times']"/></span></td>
-                    <td class="thead-data">N/A</td>
-                </tr>
-                <tr class="next-band">
-                    <td class="thead-data">100</td>
-                    <td class="thead-data">infinite</td>
-                    <td class="thead-data">60,000</td>
-                    <td class="thead-data">16 Apr 2020, 00:00</td>
-                    <td class="thead-data"><span class="pen" @click="showModal1"><font-awesome-icon :icon="['fas', 'pen']"/></span><span class="times"><font-awesome-icon :icon="['fas', 'times']"/></span></td>
-                    <td class="thead-data">N/A</td>
-                </tr>
-                <tr class="next-band">
-                    <td class="thead-data">500</td>
-                    <td class="thead-data">infinite</td>
-                    <td class="thead-data">100</td>
-                    <td class="thead-data">16 Apr 2020, 00:00</td>
-                    <td class="thead-data"><span class="pen" @click="showModal1"><font-awesome-icon :icon="['fas', 'pen']"/></span><span class="times"><font-awesome-icon :icon="['fas', 'times']"/></span></td>
-                    <td class="thead-data">N/A</td>
-                </tr>
-                <tr class="next-band">
-                    <td class="thead-data">1000</td>
-                    <td class="thead-data">100</td>
-                    <td class="thead-data">100</td>
-                    <td class="thead-data">16 Apr 2020, 00:00</td>
-                    <td class="thead-data"><span class="pen" @click="showModal1"><font-awesome-icon :icon="['fas', 'pen']"/></span><span class="times"><font-awesome-icon :icon="['fas', 'times']"/></span></td>
-                    <td class="thead-data">N/A</td>
-                </tr>
-                <tr class="next-band">
-                    <td class="thead-data">10,000</td>
-                    <td class="thead-data">infinite</td>
-                    <td class="thead-data">30,000</td>
-                    <td class="thead-data">16 Apr 2020, 00:00</td>
-                    <td class="thead-data"><span class="pen" @click="showModal1"><font-awesome-icon :icon="['fas', 'pen']"/></span><span class="times"><font-awesome-icon :icon="['fas', 'times']"/></span></td>
-                    <td class="thead-data">N/A</td>
-                </tr>
-                <tr class="next-band">
-                    <td class="thead-data">20,000</td>
-                    <td class="thead-data">100,000</td>
-                    <td class="thead-data">10,000</td>
-                    <td class="thead-data">16 Apr 2020, 00:00</td>
-                    <td class="thead-data"><span class="pen" @click="showModal1"><font-awesome-icon :icon="['fas', 'pen']"/></span><span class="times"><font-awesome-icon :icon="['fas', 'times']"/></span></td>
-                    <td class="thead-data">10 Feb 2021, 00:00</td>
-                </tr>
+        <NuxtChild />
             </table>
             <div class="smallBoxes">
-            <div class="boxes"><font-awesome-icon :icon="['fas', 'chevron-left']"/></div>
-            <div class="boxes">1</div>
-            <p>...</p>
-            <div class="boxes">4</div>
-            <div class="boxes">5</div>
-            <div class="boxes">6</div>
-            <div class="boxes">7</div>
-            <div class="boxes">8</div>
-            <p>...</p>
-            <div class="boxes">50</div>
-            <div class="boxes"><font-awesome-icon :icon="['fas', 'chevron-right']"/></div>
-            <div>Go to</div>
-            <div class="goto" role="input"></div>
+                <nuxt-link to= "/Coins/first-page" id="prev_btn"><div class="boxes"><font-awesome-icon :icon="['fas', 'chevron-left']"/></div></nuxt-link>
+                <div class="boxes">1</div>
+                <p>...</p>
+                <div class="boxes">4</div>
+                <div class="boxes">5</div>
+                <div class="boxes">6</div>
+                <div class="boxes">7</div>
+                <div class="boxes">8</div>
+                <p>...</p>
+                <div class="boxes">50</div>
+                <nuxt-link to= "/Coins/last-page" id="nxt_btn"><div class="boxes"><font-awesome-icon :icon="['fas', 'chevron-right']"/></div></nuxt-link>
+                <div>Go to</div>
+                <div class="goto" role="input"></div>
             </div>
+            <!-- <span id="page"></span> -->
         </div>
     </div>
 </template>
@@ -88,25 +42,34 @@ import EditCoin from '~/components/editCoins.vue';
             AddModal,
             EditCoin,
         },
-        mounted () {
-            document.querySelector('#modal-btn').style.display = 'block';
-            let Flex = document.querySelector('.flex');
-            let name = document.querySelector('.Navname');
-            name.textContent = 'Coins';
-        },
          methods: {
             closeModal() {
                 let modalBtn = document.querySelector('#modal-btn');
                 let modal = document.querySelector('.modal');
                 let closeBtn = document.querySelector('.close-btn');
                 modal.style.display = 'none';
-            },
+            },  
             showModal1() {
                 let modalBtn1 = document.querySelector('.pen');
                 let modal1 = document.querySelector('.modal1');
                 let closeBtn1 = document.querySelector('.close-btn1');
                 modal1.style.display = 'block';
             },
+            deleteCoin() {
+                const oneCoin = document.querySelector('.next-band');
+                oneCoin.remove();
+            },
+        },
+        mounted () {
+            let modalBtn = document.querySelector('#modal-btn');
+            modalBtn.style.display = 'block';
+            // let arrow = document.getElementById('#nxt_btn');
+            // let arrow2 = document.getElementById('#prev_btn');
+            // if (this.$nuxt.$route.name == 'Coins-last-page') {
+            //     arrow.remove();
+            // } else if (this.$nuxt.$route.name == 'Coins-first-page') {
+            //     arrow2.remove();
+            // };
         },
     }
 </script>

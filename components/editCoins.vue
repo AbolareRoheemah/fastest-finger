@@ -72,13 +72,9 @@ border-radius: 20px 20px 0px 0px;
 color: #000000;
 }
 .modal-body {
-  /* position: relative;  */
   background-color: #FFFFFF;
-  /* padding: 20px;  */
   margin: auto; 
   width: 70%;  
-  /* -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s; */
   animation-name: animatetop;
   animation-duration: 0.4s;
   width: 870px;
@@ -87,7 +83,7 @@ color: #000000;
     border-radius: 20px;
 }
 .close-btn1 {
-  /* float: right;  */
+    cursor: pointer;
   color: #200E32; 
   font-size: 28px;  
   font-weight: bold;

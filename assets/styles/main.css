@@ -89,28 +89,20 @@ body {
   color: #000000;
 }
 .input {
-  position: relative;
-  margin: 13px 0px 12px;
+  /* position: relative; */
   background: #E6E9EE;
   opacity: 0.5;
   border-radius: 27.5px;
   width: 289px;
   height: 55px;
   padding: 15px 10px 15px 36px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   color: #1D293F;
   font-family: 'Overpass';
 }
-inputParent {
-  align-items: center;
-  padding: auto 0;
-  font-size: 16px;
-  font-weight: 600;
-}
 .searchIcon {
   color: #F1AA83;
+  position: fixed;
+  right: 20%;
 }
 .helloText {
   font-family: 'Overpass';
@@ -214,8 +206,6 @@ inputParent {
   line-height: 25px;
   margin-bottom: 25px;
   /* identical to box height */
-
-
   color: #818181;
 }
 .btn {
@@ -236,7 +226,7 @@ inputParent {
   font-size: 14px;
   line-height: 17px;
   /* identical to box height */
-
+  cursor: pointer;
   text-align: center;
   text-transform: uppercase;
 
