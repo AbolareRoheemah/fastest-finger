@@ -87,11 +87,15 @@
 <style scoped>
 .contain {
     position: relative;
-    padding: auto;
+    /* padding: auto; */
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
 }
 .showToggler, .showToggler:hover {
     position: absolute;
-    left: 350px;
+    left: 18vw;
     top: 50%;
     transform: translate(0, -50%);
     font-family: 'Overpass';

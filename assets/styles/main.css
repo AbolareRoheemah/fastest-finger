@@ -13,6 +13,7 @@
   }
   .hr {
     border: 1px solid rgba(255, 255, 255, 0.14);
+    position: relative;
   }
   .sideNav a {
     padding: 8px 8px 8px 32px;
@@ -108,7 +109,7 @@
 
 /* styles for Account Settings  */
 .midDiv {
-  width: 1092px;
+  width: 85%;
   max-height: 100vh;
   height: fit-content;
   margin-left: 50%;
@@ -123,27 +124,20 @@
   color: #000000;
 }
 .setting {
-  position: relative;
-  width: 60px;
-  height: 25px;
-  left: 34px;
-  top: 20px;
-  margin-bottom: 16px;
   font-family: 'Overpass';
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 25px;
-  /* identical to box height */
-
+  margin-left: 5%;
+  margin-top: 1.5%;
   display: flex;
   align-items: center;
-
   color: #F3A627;
 }
 .hr {
   position: absolute;
-  width: 1028px;
+  width: 75vw;
   height: 0px;
   left: 50%;
   transform: translate(-50%, 0);
@@ -152,34 +146,36 @@
   border: 1px solid #E7E7E7;
 }
 .changePassword {
-  width: 248px;
   height: 37px;
   font-family: 'Overpass';
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 37px;
-  /* identical to box height */
   display: flex;
-  align-items: center;
+  justify-content: center;
   text-align: center;
   margin: 58px auto 37px;
   color: #000000;
 }
 .form-group {
-  width: 112px;
-  height: 21px;
+  position: fixed;
+  /* width: 20%; */
+  height: 5%;
   font-family: 'Overpass';
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 21px;
-  margin-left: 346px;
+  left: 50%;
+  transform: translate(-50%, 0);
   color: #000000;
   white-space: nowrap;
 }
 .formInput {
-  width: 400px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 30vw;
   height: 70px;
   padding: auto 16px;
   border: 1px solid #4B545A;
@@ -367,6 +363,21 @@ table {
 .coins-mid {
   overflow-x: auto;
 }
+.formInput {
+  width: 50vw;
+}
+.btn {
+  margin-bottom: 100px;
+}
+.midDiv {
+  padding-bottom: 60%;
+}
+.showToggler {
+  position: absolute;
+  right: 0;
+  margin-left: 10vw;
+  padding: 0;
+}
 }
 
 @media only screen and (max-width:450px) {
@@ -386,5 +397,28 @@ table {
   .main-content {
     position: sticky;
     left: 0;
+  }
+  .hr, .setting {
+    display: none;
+  }
+  .midDiv {
+    padding: 10%;
+    height: 100vh;
+  }
+  .changePassword {
+    margin-top: 0; 
+    margin-bottom: 10vh;
+  }
+  .formInput {
+    width: 80vw;
+  }
+  .btn {
+    margin-top: 15vh;
+  }
+  .showToggler {
+    position: absolute;
+    right: 0;
+    margin-left: 25vw;
+    padding: 0;
   }
 }
