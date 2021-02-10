@@ -12,7 +12,7 @@
                     <th class="thead-data">Action</th>
                     <th class="thead-data">Expiry</th>
                 </thead>
-            <NuxtChild />
+            <!-- <NuxtChild /> -->
             </table>
             <div class="smallBoxes">
                 <nuxt-link to= "/Coins/first-page" id="prev_btn"><div class="boxes"><font-awesome-icon :icon="['fas', 'chevron-left']"/></div></nuxt-link>
