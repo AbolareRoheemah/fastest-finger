@@ -108,13 +108,14 @@
 
 /* styles for Account Settings  */
 .midDiv {
-  position: absolute;
   width: 1092px;
-  height: 680px;
-  left: 50%;
+  max-height: 100vh;
+  height: fit-content;
+  margin-left: 50%;
   transform: translate(-50%, 0);
-  top: 104px;
-  right: 50px;
+  margin-top: 24px;
+  padding-bottom: 50%;
+  margin-bottom: 10%;
   display: inline-block;
   background: #FFFFFF;
   border: 1px solid #E2E2EA;
@@ -198,8 +199,9 @@
   color: #818181;
 }
 .btn {
-  position: absolute;
-  top: 565px;
+  position: relative;
+  top: 60vh;
+  margin-bottom: 25vh;
   left: 50%;
   transform: translate(-50%, 0);
   background: #F1AA83;
@@ -280,7 +282,6 @@
   margin-top: 6%;
 }
 .coins-mid {
-  position: absolute;
   width: 1092px;
   max-height: 100vh;
   height: auto;
@@ -291,11 +292,6 @@
   margin-bottom: 20%;
   background: #FFFFFF;
   border: 1px solid #E2E2EA;
-}
-.marginTest {
-  overflow: hidden;
-  height: 30px;
-  width: 0px;
 }
 .top-band {
   /* position: absolute; */

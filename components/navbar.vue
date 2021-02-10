@@ -21,8 +21,9 @@
         data() {
             return {
                 flag: undefined,
-                names: this.$nuxt.$route.name,
-                Search: 'Search'
+                names: undefined,
+                Search: 'Search',
+                checkName: this.$nuxt.$route.name,
             }
         },
         methods: {
@@ -40,9 +41,9 @@
             },
         },
         created () {
-            if (this.names == 'index') {
+            if (this.checkName == 'index') {
                 this.names = 'Account Settings';
-            } else if (this.names == 'Coins' || this.names == 'Coins-last-page' || this.names == 'Coins-first-page') {
+            } else if (this.checkName == 'Coins' || this.checkName == 'Coins-last-page' || this.checkName == 'Coins-first-page') {
                 this.names = 'Coins';
             }
         },

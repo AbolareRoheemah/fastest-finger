@@ -64,13 +64,6 @@ import EditCoin from '~/components/editCoins.vue';
         mounted () {
             let modalBtn = document.querySelector('#modal-btn');
             modalBtn.style.display = 'block';
-            // let arrow = document.getElementById('#nxt_btn');
-            // let arrow2 = document.getElementById('#prev_btn');
-            // if (this.$nuxt.$route.name == 'Coins-last-page') {
-            //     arrow.remove();
-            // } else if (this.$nuxt.$route.name == 'Coins-first-page') {
-            //     arrow2.remove();
-            // };
-        },
+        }
     }
 </script>
