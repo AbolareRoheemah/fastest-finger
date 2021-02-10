@@ -278,7 +278,7 @@
   margin-top: 6%;
 }
 .coins-mid {
-  width: 1092px;
+  width: 80vw;
   max-height: 100vh;
   height: auto;
   margin-left: 50%;
@@ -381,8 +381,8 @@ table {
 }
 
 @media only screen and (max-width:450px) {
-  .flex .button, .input, .userImg, .picIcon,.helloText {
-    display: none
+  .flex .button, .input, .userImg, .picIcon, .helloText {
+    display: none;
   }
   .coins-mid {
     overflow-x: auto;

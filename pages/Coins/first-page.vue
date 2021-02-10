@@ -1,15 +1,13 @@
 <template>
     <div>
-        <table class="paddi">
-                <tr class="next-band" v-for="info in infos" :key="info.Price">
-                    <td class="thead-data">{{ info.Coin_Quantity }}</td>
-                    <td class="thead-data">{{ info.Quantity }}</td>
-                    <td class="thead-data">{{ info.Price }}</td>
-                    <td class="thead-data">{{ info.Date_Created }}</td>
-                    <td class="thead-data"><span class="pen" @click="showModal1"><font-awesome-icon :icon="['fas', 'pen']"/></span><span class="times" @click="deleteCoin"><font-awesome-icon :icon="['fas', 'times']"/></span></td>
-                    <td class="thead-data">{{ info.Expiry }}</td>
-                </tr>
-        </table>
+        <tr class="next-band" v-for="info in infos" :key="info.Price">
+            <td class="thead-data">{{ info.Coin_Quantity }}</td>
+            <td class="thead-data">{{ info.Quantity }}</td>
+            <td class="thead-data">{{ info.Price }}</td>
+            <td class="thead-data">{{ info.Date_Created }}</td>
+            <td class="thead-data"><span class="pen" @click="showModal1"><font-awesome-icon :icon="['fas', 'pen']"/></span><span class="times" @click="deleteCoin"><font-awesome-icon :icon="['fas', 'times']"/></span></td>
+            <td class="thead-data">{{ info.Expiry }}</td>
+        </tr>
     </div>
 </template>
 
