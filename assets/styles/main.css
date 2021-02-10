@@ -384,6 +384,9 @@ table {
   .flex .button, .input, .userImg, .picIcon,.helloText {
     display: none
   }
+  .coins-mid {
+    overflow-x: auto;
+  }
   .button {
     width: 100px;
     height: 48px;
