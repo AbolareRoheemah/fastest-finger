@@ -1,34 +1,17 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        fastest-finger
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+ <div>
+   <MidDiv />
   </div>
 </template>
 
 <script>
-export default {}
+import MidDiv from '~/components/mid-content-acc.vue';
+
+
+export default {
+  name: 'Account',
+  components: { MidDiv },
+}
 </script>
 
 <style>
