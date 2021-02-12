@@ -8,15 +8,18 @@
             <div class="label">
                 <div>
                     <p>Coin Quantity</p>
-                    <div class="input-box" role="input">Enter Quantity</div>
+                    <input type="text" class="input-box" v-model="Coin_Quantity">
+                    <!-- <div class="input-box" role="input">Enter Quantity</div> -->
                 </div>
                 <div>
                     <p>Price</p>
-                    <div class="input-box" role="input">Please Enter</div>
+                    <input type="text" class="input-box" v-model="price">
+                    <!-- <div class="input-box" role="input">Please Enter</div> -->
                 </div>
                 <div>
                     <p>Quantity</p>
-                    <div class="input-box" role="input">Please Enter</div>
+                    <input type="text" class="input-box" v-model="Quantity">
+                    <!-- <div class="input-box" role="input">Please Enter</div> -->
                 </div>
                 <div>
                     <p>Expiry</p>
@@ -30,6 +33,13 @@
 
 <script>
 export default {
+    data() {
+        return {
+            Coin_Quantity: 'Enter Quantity',
+            price: "Please Enter",
+            Quantity: "Please Enter"
+        }
+    },
     methods: {
         closeModal() {
             let modalBtn = document.querySelector('#modal-btn');

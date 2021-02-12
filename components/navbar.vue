@@ -3,8 +3,9 @@
         <div class="navDiv">
             <a class="openSideNav" @click="showNav"><font-awesome-icon :icon="['fas', 'chevron-circle-right']"/></a>
             <div class="flex">
-                <nuxt-link to='/Coins/first-page'><p class="Navname">{{ names }}</p>
-                    <div v-show="flag" class="button" id="modal-btn" @click="showModal" role="button">New Pricing</div>
+                <nuxt-link to='/Coins'><p class="Navname" v-if="this.$route.name == 'index'">{{ Acctname }}</p>
+                <p class="Navname" v-if="this.$route.name != 'index'">{{ $route.name }}</p>
+                    <div v-if="this.$route.name != 'index' " class="button" id="modal-btn" @click="showModal" role="button">New Pricing</div>
                 </nuxt-link>
             </div>
                 <input type="text" class="input" v-model="Search"><!-- <font-awesome-icon :icon="['fas', 'search']" class="searchIcon"/> -->
@@ -21,9 +22,9 @@
         data() {
             return {
                 flag: undefined,
-                names: undefined,
                 Search: 'Search',
-                checkName: this.$nuxt.$route.name,
+                Acctname: 'Account Settings',
+                CoinsName: 'Coins'
             }
         },
         methods: {
@@ -41,11 +42,13 @@
             },
         },
         created () {
-            if (this.checkName == 'index') {
-                this.names = 'Account Settings';
-            } else if (this.checkName == 'Coins' || this.checkName == 'Coins-last-page' || this.checkName == 'Coins-first-page') {
-                this.names = 'Coins';
-            }
+            // if (this.$route.name == 'index') {
+            //     this.name = ;
+            
+            // }
+            // if (this.$route.name == 'Coins-first-page' || this.$route.name == 'Coins-last-page') {
+            //     this.name = 'Coins'
+            // }
         },
     }
 </script>
